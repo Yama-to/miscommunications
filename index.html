@@ -1,0 +1,128 @@
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>My Kandy Hack</title>
+
+    <link rel="stylesheet" href="index.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- JQuery -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
+    <!-- for IE8 support  -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!-- navigation bar -->
+      <div class="header clearfix">
+        <div class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" name="username" id="username" placeholder="Username" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password"  name="password" id="password" placeholder="Password" class="form-control">
+            </div>
+            <input type="submit" value="Login" class="btn btn-info" id="login" onclick="toggleLogin();">
+         </div>
+        <h3 class="title text-muted"><span class="glyphicon glyphicon-screenshot" area-hidden="true"></span> My Kandy Hack</h3>
+      </div>
+
+      <!-- messages when login/out -->
+      <div id="flash_message"></div>
+
+      <!-- challenge -->
+      <div class="jumbotron challenge">
+        <h1 id="challenge_title">LET'S CHALLENGE!</h1>
+        <p class="inst" id="local_inst"></p>
+        <small><em><p id="remote_inst" class="text-muted">
+          Push [CHANGE] button to start
+        </p></em></small>
+        <p><a class="btn btn-lg btn-primary btn-start" href="#" role="button" onclick="changeChallenge();">CHANGE</a></p>
+      </div>
+
+      <!-- connect function -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <b class="text-muted">ADD PLAYER</b>
+        </div>
+        <div class="row">
+        <div class="panel-body">
+          <div class="col-sm-8">
+            <input type="text" id="callee" class="form-control">
+          </div>
+          <div class="col-sm-2">
+            <input type="submit" value="CONNECT" class="btn btn-default btn-connect" id='make-call'
+        onclick='startCall();'>
+          </div>
+          <div class="col-sm-2">
+            <input type="submit" value="DISCONNECT" class="btn btn-danger btn-connect" id='end-call'
+        onclick='toggleCall();'>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- drawing canvas -->
+      <div class="panel panel-default col-lg-12" id="canvasDiv" style=''>
+        <h4 class="sample_color">CANVAS</h4>
+        <canvas id='canvas' class="panel-body" >
+        </canvas>
+      </div>
+
+      <!-- local/remote boxes -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="thumbnail sample_color">
+            <div id="local-container">
+              <h4>USER-1 (LOCAL)</h4>
+              <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.Maecenas sed diam eget risus varius blandit sit amet non magna.Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="thumbnail sample_color">
+            <div id="remote-container">
+              <h4>USER-2 (REMOTE)</h4>
+              <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.Maecenas sed diam eget risus varius blandit sit amet non magna.Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- appendix -->
+      <footer class="footer">
+        <p>&copy; Kandy Hack Team 2015</p>
+      </footer>
+      <div class="page_bottom"></div>
+
+      <!-- chat box -->
+      <div class="message_log">
+        <textarea class="form-control" placeholder="MESSAGE LOG" value="" readonly id="log"></textarea>
+      </div>
+
+    </div> <!-- /container -->
+    <script type="text/javascript" src="index.js"></script>
+    <!-- kandy cdn -->
+    <script src="https://kandy-portal.s3.amazonaws.com/public/javascript/kandy/2.4.0/kandy.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- JQuery Set -->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  </body>
+</html>

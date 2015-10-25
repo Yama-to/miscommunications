@@ -1,0 +1,57 @@
+/* Custom Designs are below */
+
+/*footer:after {
+  margin-bottom: 100px:
+}*/
+
+.page_bottom {
+  height:100px;
+}
+
+.sample_color {
+  color: #aaa;
+}
+
+.message_log {
+  width: 100%;
+  opacity: 0.6;
+  bottom: 0;
+  left:   0;
+  right:  0;
+  position: fixed;
+}
+
+.message_log .form-control {
+  height: 100px;
+}
+
+.btn-connect {
+  width: 100%;
+}
+
+.header {
+  border-bottom: 2px dashed #aaa;
+  margin-bottom: 20px;
+}
+
+.navbar-right {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.title {
+  vertical-align: middle;
+}
+
+.challenge {
+  /* text-align: center; */
+}
+
+.btn-start {
+  width: 200px;
+}
+
+.inst {
+  font-size: 2.5em !important;
+  color: #555;
+}
